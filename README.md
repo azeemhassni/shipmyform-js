@@ -1,7 +1,7 @@
 # shipmyform-js
 
 [![npm](https://img.shields.io/npm/v/@shipmyform/core?label=%40shipmyform%2Fcore)](https://www.npmjs.com/package/@shipmyform/core)
-[![ci](https://github.com/azeemhassni/shipmyform-js/actions/workflows/ci.yml/badge.svg)](https://github.com/azeemhassni/shipmyform-js/actions/workflows/ci.yml)
+[![ci](https://github.com/ShipMyForm/shipmyform-js/actions/workflows/ci.yml/badge.svg)](https://github.com/ShipMyForm/shipmyform-js/actions/workflows/ci.yml)
 [![license](https://img.shields.io/npm/l/@shipmyform/core)](LICENSE)
 
 Client libraries for submitting forms to [ShipMyForm](https://shipmyform.com) over `fetch`, with typed results and framework bindings.

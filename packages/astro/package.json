@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/azeemhassni/shipmyform-js.git",
+    "url": "git+https://github.com/ShipMyForm/shipmyform-js.git",
     "directory": "packages/astro"
   },
   "keywords": ["shipmyform", "forms", "astro"],
