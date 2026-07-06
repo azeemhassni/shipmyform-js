@@ -1,0 +1,40 @@
+{
+  "name": "@shipmyform/react",
+  "version": "0.1.0",
+  "description": "React hook for submitting forms to ShipMyForm.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azeemhassni/shipmyform-js.git",
+    "directory": "packages/react"
+  },
+  "keywords": ["shipmyform", "forms", "react"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --external react"
+  },
+  "dependencies": {
+    "@shipmyform/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "react": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  }
+}
