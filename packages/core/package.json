@@ -1,0 +1,35 @@
+{
+  "name": "@shipmyform/core",
+  "version": "0.1.0",
+  "description": "Submit forms to ShipMyForm from any frontend.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azeemhassni/shipmyform-js.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://shipmyform.com",
+  "keywords": ["shipmyform", "forms", "form-backend", "fetch"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "tsup": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,5 @@
+export const HONEYPOT = '_gotcha'
+export const TIME_TOKEN = '_smf_ts'
+export const SUBJECT = '_subject'
+export const REDIRECT = '_redirect'
+export const TURNSTILE = 'cf-turnstile-response'
