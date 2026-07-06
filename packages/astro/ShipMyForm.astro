@@ -1,0 +1,31 @@
+---
+interface Props {
+  formId: string
+  endpoint?: string
+  class?: string
+}
+
+const { formId, endpoint = 'https://shipmyform.com', class: className } = Astro.props
+const base = endpoint.replace(/\/+$/, '')
+const action = `${base}/f/${formId}`
+---
+
+<form method="POST" action={action} class={className} data-shipmyform data-endpoint={base} data-form-id={formId}>
+  <slot />
+</form>
+
+<script>
+  import { createClient, enhance } from '@shipmyform/core'
+
+  for (const form of document.querySelectorAll<HTMLFormElement>('form[data-shipmyform]')) {
+    const formId = form.dataset.formId
+    const endpoint = form.dataset.endpoint
+    if (!formId) continue
+
+    enhance(form, createClient({ formId, endpoint }), {
+      onSuccess: () => form.dispatchEvent(new CustomEvent('shipmyform:success', { bubbles: true })),
+      onError: (error) =>
+        form.dispatchEvent(new CustomEvent('shipmyform:error', { bubbles: true, detail: error })),
+    })
+  }
+</script>
