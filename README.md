@@ -47,6 +47,16 @@ function Contact() {
 
 ShipMyForm's endpoint is public and cross-origin, so there is no CSRF token to fetch. Requests are screened by an origin allowlist, a honeypot field (`_gotcha`), an optional Cloudflare Turnstile token, and rate limiting. The client keeps the honeypot empty, forwards a Turnstile token when you pass one, and can fetch a signed time-trap token through an optional `tokenProvider`.
 
+## Releasing
+
+Published with [Changesets](https://github.com/changesets/changesets). Include one in your PR:
+
+```sh
+pnpm changeset
+```
+
+Merging to `main` opens a "Version Packages" PR; merging that bumps versions and publishes to npm.
+
 ## License
 
 MIT
